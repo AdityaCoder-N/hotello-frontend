@@ -1,0 +1,108 @@
+#c-page{
+    /* height: 80vh; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.c-container{
+    /* position: absolute; */
+
+    height: 80%;
+    width: 80%;
+    margin-top: 5%;
+    display: flex;
+}
+
+.c-bookingDetails{
+
+    background-color: #b56953;
+    width: 40%;
+    color: #faf9f5;
+    text-align: left;
+
+    padding: 2%;
+}
+.c-bookingDetails h3{
+    margin-top: 5%;
+}
+
+.c-paymentDetails{
+    padding: 2rem;
+    background-color: #faf9f5;
+
+    width: 60%;
+}
+
+.c-out{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.booking-name-section{
+  
+    display: flex;
+    gap: 20px;
+    max-height: 23vh;
+    text-align: left;
+    margin-top: 3%;
+    background-color: #F2F2E4;
+    color:#b56953;
+    padding: 2%;
+}
+
+.booking-name-img{
+    object-fit: cover;
+    max-height: 50%;
+    width: 35%;
+    
+}
+.booking-hotel-name{
+    font-size: 25px;
+   
+}
+.booking-date{
+ 
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.checkin{
+    gap: 7px;
+}
+
+.booking-room-container{
+    margin-top: 5%;
+    background-color: #F2F2E4;
+    color: #b56953;
+    padding: 2%;
+}
+
+.room-type{
+    display: flex;
+    gap: 3%;
+}
+
+.cost{
+    margin-top: 5%;
+    display: inline-block;
+   
+}
+
+/* mobiles */
+@media only screen and (max-width: 1042px) {
+
+    .c-container{
+        display: block;
+    }
+
+    .c-bookingDetails{
+        width: 100%;
+    }
+    .c-paymentDetails{
+        width: 100%;
+    }
+    
+}

@@ -1,0 +1,26 @@
+export const locations=[
+    {
+        img:"./images_cities/akshay-syal-5vDTocCCutE-unsplash.jpg",
+        name:"Dehradun"
+    },
+    {
+        img:"./images_cities/chandan-chaurasia-fuLPFeAd17E-unsplash.jpg",
+        name:"Bengaluru"
+    },
+    {
+        img:"./images_cities/aman-upadhyay-NAjYWkVPwnc-unsplash.jpg",
+        name:"Hyderabad"
+    },
+    {
+        img:"./images_cities/tejashvi-verma-HnlNbNsiJz0-unsplash.jpg",
+        name:"Manali"
+    },
+    {
+        img:"./images_cities/raja-sen-FYos6AbcDsY-unsplash.jpg",
+        name:"Goa"
+    },
+    {
+        img:"./images_cities/anas-villan-R_z8A9kYZKQ-unsplash.jpg",
+        name:"Chandigarh"
+    }
+]

@@ -1,0 +1,101 @@
+.reserve{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0,0,0, 0.418);
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+.rContainer{
+    background-color: white;
+    padding: 20px;
+    position: relative;
+}
+
+.rClose{
+    font-size: 30px;
+    position: absolute;
+    top: 0;
+    /* z-index: 200000; */
+    
+    left: 97%;
+    cursor: pointer;
+}
+
+.rItem{
+    display: grid;
+
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
+    border: solid 1px #d5907d;
+    margin-top: 8px;
+}
+
+.rItemInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.rSelectRooms{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    font-size: 10px;
+    color: grey;
+}
+
+.rRoom{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.rRoom input{
+    height: 20px;
+    width: 20px;
+}
+.rTitle{
+    font-weight: 600;
+    font-size: large;
+}
+
+.rDesc{
+    font-weight: 500;
+}
+
+.rMax{
+    font-size: 12px;
+}
+
+.rPrice{
+    font-weight: 500;
+}
+
+.rButton{
+    border: 1px solid white;
+    padding: 10px 20px;
+    background-color: #d6816a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 0%;
+}
+
+.rButton:hover{
+    background-color: transparent;
+    color: #d5907d;
+    border: 1px solid #d6816a;
+    border-radius: 0%;
+}

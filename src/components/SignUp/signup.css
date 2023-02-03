@@ -1,0 +1,35 @@
+.signup-container{
+    width:400px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    /* padding:50px; */
+    padding: 3.125rem 1.875rem 2rem 1.875rem;
+    background-color:white;
+    border-radius: 10px;
+
+    margin-top: 4rem;
+    font-size: small;
+    
+}
+
+.form-components{
+    padding: 5px;
+}
+
+.button-box{
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+}
+
+.button-box button{
+    background-color: #d4a79a;
+    color: white;
+    border: none;
+}
+.button-box button:hover{
+    background-color: #c27f6d;
+    color: white;
+}

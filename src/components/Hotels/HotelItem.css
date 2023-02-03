@@ -1,0 +1,55 @@
+.card-image{
+    height: 100%;
+    width:100%;
+}
+.hItemImage{
+    padding: 15px;
+}
+.card{
+    background-color: #faf9f5;
+    border: none;
+    border-radius: 0%;
+}
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body{
+    padding:23px;
+}
+
+.card-title{
+    color: #b56953;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card-body h6{
+    color: rgb(74, 162, 74);
+    font-family: "josefin-sans", sans-serif;
+}
+
+.h-photos{
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.h-photos i{
+    font-size: 20px;
+}
+
+.btn-container{
+    display: flex;
+}
+
+.item-btn{
+    background-color: #b56953;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0%;
+    position: absolute;
+    right: 3%;
+}
+.item-btn:hover{
+    background-color: transparent;
+    color: #b56953;
+    border: 1px solid #b56953;
+    border-radius: 0%;
+}

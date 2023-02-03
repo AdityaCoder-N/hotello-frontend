@@ -1,0 +1,170 @@
+
+.slider{
+    width: 100%;
+    position: relative;
+    height: 67vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.slide{
+    position:absolute;
+    width: 100%;
+    max-height:67vh;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all .5s ease;
+}
+.current{
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.image{
+    height:100%;
+    width: 100%;
+    object-fit: cover;
+}
+.darken{
+    filter: brightness(70%);
+}
+.image-container{
+    height: 67vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* image title styling and animation */
+.content{
+    text-align: center;
+    margin-top: -3rem;
+    position:absolute;
+    color:white;
+    animation: slide-up 1s ease .3s;
+    /* animation: fadeIn ease 2s; */
+    animation-fill-mode: forwards;
+    visibility: hidden;
+    font-family: cormorant-garamond, serif;
+    font-weight: 400;
+
+    font-style: normal;
+    font-size: 80px;
+    
+}
+/* 
+.content h2{
+    
+    width: 60%;
+    
+} */
+
+@keyframes slide-up{
+    0%{
+        visibility: visible;
+        opacity: 0; 
+        top: 75%;
+    }
+    100%{
+        visibility: visible;
+        opacity: 1; 
+        top: 50%;
+    }
+}
+
+
+.right-arrow,.left-arrow{
+    position: absolute;
+    top:50%;
+    font-size: 3rem;
+    color:black;
+    z-index: 2;
+    cursor: pointer;
+    user-select: none;
+    color: rgba(255,255,255,.5);
+    border-radius: .25rem;
+}
+
+.left-arrow{
+    left: 20px;
+}
+.right-arrow{
+    right: 20px;
+}
+.right-arrow:hover,
+.right-arrow:focus
+{
+    color: white;
+}
+.left-arrow:hover,
+.left-arrow:focus
+{
+    color: white;
+}
+
+
+/* booking area card */
+
+.booking-area{
+    height: 8rem;
+    background-color: #f8f2e8;
+
+    /* box-shadow: 0 0.625rem 0.9375rem 0 rgb(0 0 0 / 10%); */
+    margin-top: -4rem;
+    
+    padding: 3.125rem 1.875rem;
+    position: relative;
+    z-index: 20;
+    display: block;
+}
+
+.booking-area form{
+    margin-top: -1rem;
+}
+
+label{
+    display: block;
+    padding:2px;
+    font-size: larger;
+    
+}
+
+.form-control{
+    border-radius: 0%;
+}
+.search-btn{
+    background-color: #b56953;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0%;
+    
+}
+.search-btn:hover{
+    background-color: transparent;
+    color: #b56953;
+    border: 1px solid #b56953;
+    border-radius: 0%;
+}
+
+
+/* responsive design  */
+
+/* tablets */
+@media only screen and (max-width: 991px){
+
+    .booking-area{
+        height: auto;
+    }
+    
+}
+
+
+/* mobiles */
+@media only screen and (max-width: 768px) {
+    .content{
+        font-size: 50px;
+    }
+}

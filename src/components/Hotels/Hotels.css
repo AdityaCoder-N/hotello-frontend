@@ -1,0 +1,60 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+.hotels-container{
+    margin-top: 3rem;
+    padding-left: 6%;
+    padding-right: 6%;
+}
+
+.hotels-booking-area{
+    
+    /* background-color: #faf9f5; */
+    background-color: #faf9f5;
+    font-family: 'Lato', sans-serif;
+    padding: 3.125rem 1.875rem;
+    height: 600px;
+   
+}
+.search-btn{
+    background-color: #b56953;
+    color: white;
+    border: 1px solid white;
+    border-radius: 0%;
+}
+.search-btn:hover{
+    background-color: transparent;
+    color: #bc5d43;
+    border: 1px solid #bc5d43;
+    border-radius: 0%;
+}
+
+.h-formComp{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    padding: 20px;
+    margin: 10px;
+}
+.form-control{
+    border:1px solid #b56953;
+}
+
+.offers{
+    
+    text-align: center;
+
+    margin-top: 2rem ;
+    background-color: #faf9f5;
+    font-size: larger;
+    /* font-family: "Josefin Sans",sans-serif; */
+    font-family: 'Times New Roman', Times, serif;
+    padding: 3.125rem 1.875rem;
+    height: 600px;
+}
+
+.offers-content{
+    margin-top: 30px;
+}
+.offers-content li{
+    padding: 8px;
+}

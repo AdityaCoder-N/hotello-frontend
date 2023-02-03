@@ -1,0 +1,116 @@
+.search-container{
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    height: 30%;
+}
+
+/* .search-component{
+    padding: 10px 10px 10px 0;
+    width: 40%;
+} */
+
+.search-body{
+    background-color: #b56953;
+    height: 100%;
+    display: flex;
+}
+
+.search-content{
+    display: flex;
+    height:30%;
+    width:80%;
+    background-color:#f8f2e8 ;
+    margin-top : 30%;
+
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.text{
+    transition: transform 0.2s ease-in-out;
+}
+
+.text:hover{
+    transform: translateX(10px);
+    cursor: pointer;
+    /* text-shadow: 2px 2px 5px rgb(76, 76, 76); */
+}
+
+
+ #search-img{ 
+    width:  915px;  
+} 
+
+.modal-body{
+    background-color: #F8F5E8;
+}
+
+.modal-btn{
+    background-color: #b56953;
+    color: white;
+    border: 1px solid white;
+}
+.modal-btn:hover{
+    background-color: transparent;
+    color: #b56953;
+    border: 1px solid #b56953;
+}
+
+.hotels-booking-area-modal{
+    
+    /* background-color: #faf9f5; */
+    background-color: #F8F5E8;
+    
+    padding: 2.125rem 1.875rem;
+    height: 350px;
+   
+}
+
+
+/* responsive */
+
+@media only screen and (max-width: 1400px){
+
+    #search-img{
+        width: 778px;
+    }
+}
+@media only screen and (max-width: 1200px){
+
+    #search-img{
+        width: 643px;
+    }
+}
+
+
+/* tablets */
+@media only screen and (max-width: 991px){
+    #search-img{
+        width: 473px;
+    }
+    
+    
+}
+
+
+/* mobiles */
+@media only screen and (max-width: 768px) {
+    
+    .search-body{
+        z-index: 1;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+    }
+    .search-content{
+        height:100px;
+        margin-top: 10%;
+    }
+    #search-img{
+        width: 541px;
+    }
+
+}
