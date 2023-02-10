@@ -122,7 +122,7 @@ const Hotels = (props) => {
 
         console.log(latitude)
    
-        const res = await fetch(` https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
+        const res = await fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
         
         const address = await res.json();
         console.log(address);

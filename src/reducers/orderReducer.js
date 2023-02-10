@@ -34,7 +34,6 @@ const orderReducer = createSlice({
             console.log(checked)
             console.log(num)
             
-            
             const present = state.roomsBooked.filter((item)=>item.roomType===type);
             // console.log("is present : ",present)
 

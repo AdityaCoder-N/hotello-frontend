@@ -158,3 +158,4 @@ const Reserve = ({setOpen,hotelId,hotelName,img}) => {
 }
 
 export default Reserve
+
