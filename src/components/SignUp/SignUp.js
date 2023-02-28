@@ -10,7 +10,7 @@ const SignUp = () => {
 
   const [loading, setLoading] = useState(false)
 
-  const host = "http://localhost:3001";
+  const host = "https://hotello-backend-pjrg.onrender.com";
 
   const onchange =(e)=>{
     setCredentials({...credentials,[e.target.name]:e.target.value});

@@ -7,7 +7,7 @@ import './Checkout.css'
 
 const Checkout = (props) => {
 
-    const host = "http://localhost:3001";
+    const host = "https://hotello-backend-pjrg.onrender.com";
 
     const [credentials,setCredentials] = useState({name:'',email:'',number:'',adhaar:''});
 
