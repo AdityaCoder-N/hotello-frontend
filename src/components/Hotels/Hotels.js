@@ -134,68 +134,59 @@ const Hotels = (props) => {
 
     const getHotelDetails = async () => {
 
-        let options = [];
-
         console.log("id array : ",idArray);
 
-        for (let i = count; i < Math.min(idArray.current.length, count+4); i++) {
-
-            const temp_options = {
-                method: 'GET',
-                url: 'https://hotels-com-provider.p.rapidapi.com/v2/hotels/details',
-                params: {
-                    
-                    domain: 'IN', 
-                    locale: 'en_IN',
-                    hotel_id: idArray.current[i].id,
-                    
-                },
-                headers: {
-                    'X-RapidAPI-Key': key,
-                    'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com'
-                }
-            };
-
-            options.push(temp_options);
-
-        }
         setCount(count+4);
 
         let parsedData = [];
-        axios.all(options.map((option) => axios.request(option))).then((response) => {
 
-            let i = 0;
-            response.map((response) => {
+        for (let i = count; i < Math.min(idArray.current.length, count+4); i++) {
 
-                const hotelImages=[];
-                const imageArr = response.data.propertyGallery.images;
-                for(let i=0;i< Math.min(imageArr.length,4);i++)
-                {
-                    hotelImages.push(imageArr[i].image.url);
-                }
-                // console.log(response.data);
-                const obj = {
-                    id: response.data.summary.id,
-                    name: response.data.summary.name,
-                    address: response.data.summary.location.address.firstAddressLine +" "+ response.data.summary.location.address.secondAddressLine,
-                    price: idArray.current[i].price,
-                    rating: response.data.summary.overview.propertyRating.rating,
-                    thumbnail: idArray.current[i].image,
-                    images:hotelImages,
-                    mapImage : response.data.summary.location.staticImage.url
-                }
-                parsedData.push(obj);
-                i++;
-
+            setTimeout(()=>{
+                const temp_options = {
+                    method: 'GET',
+                    url: 'https://hotels-com-provider.p.rapidapi.com/v2/hotels/details',
+                    params: {
+                        
+                        domain: 'IN', 
+                        locale: 'en_IN',
+                        hotel_id: idArray.current[i].id,
+                        
+                    },
+                    headers: {
+                        'X-RapidAPI-Key': key,
+                        'X-RapidAPI-Host': 'hotels-com-provider.p.rapidapi.com'
+                    }
+                };
+    
+                axios.request(temp_options).then((response)=>{
+                    const hotelImages=[];
+                    const imageArr = response.data.propertyGallery.images;
+                    for(let i=0;i< Math.min(imageArr.length,4);i++)
+                    {
+                        hotelImages.push(imageArr[i].image.url);
+                    }
+                    // console.log(response.data);
+                    const obj = {
+                        id: response.data.summary.id,
+                        name: response.data.summary.name,
+                        address: response.data.summary.location.address.firstAddressLine +" "+ response.data.summary.location.address.secondAddressLine,
+                        price: idArray.current[i].price,
+                        rating: response.data.summary.overview.propertyRating.rating,
+                        thumbnail: idArray.current[i].image,
+                        images:hotelImages,
+                        mapImage : response.data.summary.location.staticImage.url
+                    }
+                    parsedData.push(obj);
+                    const newhotels = hotels.concat(parsedData);
+                    setHotels(newhotels);
+                    setLoading(false);
+        
                 })
-
-            // console.log(JSON.stringify(parsedData));
-            const newhotels = hotels.concat(parsedData);
-            // console.log("final hotels : ",JSON.stringify(newhotels));
-            setHotels(newhotels);
-            setLoading(false);
-
-        });
+            },1000)
+            
+        }
+        
     }
 
     const [showAlert,setShowAlert] = useState(false);
