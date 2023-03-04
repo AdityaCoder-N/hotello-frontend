@@ -1,32 +1,39 @@
-.search-container{
-    padding: 0;
-    margin-top: 2rem;
-    display: flex;
-    height: 30%;
+.search-component{
+    padding: 4% 7%;
 }
 
-/* .search-component{
-    padding: 10px 10px 10px 0;
-    width: 40%;
-} */
+.search-container{
+    display: flex;
+    gap: 1%;
+}
+
+.search-left{
+    width: 35%;
+
+    background-color: #b56953;
+
+    position: relative;
+}
+
+.search-img-container{
+    width: 65%;
+}
+
+#search-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 
 .search-body{
-    background-color: #b56953;
-    height: 100%;
-    display: flex;
-}
-
-.search-content{
-    display: flex;
-    height:30%;
-    width:80%;
-    background-color:#f8f2e8 ;
-    margin-top : 30%;
-
-    font-size: 25px;
-    justify-content: center;
-    align-items: center;
+    background-color: #F8F5E8;
+    width: 70%;
+    padding: 10% 5%;
+    font-size: x-large;
     text-align: center;
+
+    position: absolute;
+    top:30%;
 }
 
 .text{
@@ -39,10 +46,6 @@
     /* text-shadow: 2px 2px 5px rgb(76, 76, 76); */
 }
 
-
- #search-img{ 
-    width:  915px;  
-} 
 
 .modal-body{
     background-color: #F8F5E8;
@@ -72,45 +75,51 @@
 
 /* responsive */
 
-@media only screen and (max-width: 1400px){
-
-    #search-img{
-        width: 778px;
-    }
-}
-@media only screen and (max-width: 1200px){
-
-    #search-img{
-        width: 643px;
-    }
-}
-
-
-/* tablets */
-@media only screen and (max-width: 991px){
-    #search-img{
-        width: 473px;
-    }
-    
-    
-}
-
-
-/* mobiles */
-@media only screen and (max-width: 768px) {
-    
+@media only screen and (max-width: 840px) {
     .search-body{
-        z-index: 1;
-        align-items: center;
-        justify-content: center;
-        height: 200px;
+        font-size: large;
+        top:25%;
     }
-    .search-content{
-        height:100px;
-        margin-top: 10%;
+}
+@media only screen and (max-width: 655px) {
+    .search-body{
+        width: 80%;
     }
-    #search-img{
-        width: 541px;
+}
+@media only screen and (max-width: 576px) {
+    .search-component{
+        padding: 4% 0%;
     }
+}
+
+/* main mobile */
+@media only screen and (max-width: 483px) {
+    .search-container{
+        display: block;
+    }
+    .search-left{
+      
+        width: 100%;
+        height: 100%;
+        display: block;
+    
+        background-color: #b56953;
+        padding: 3%;
+    
+    }
+    .search-body{
+        background-color: #F8F5E8;
+        width: 100%;
+        padding: 5% 5%;
+
+        font-size: x-large;
+        text-align: center;
+        position: relative;
+    
+    }
+    .search-img-container{
+        width: 100%;
+    }
+    
 
 }

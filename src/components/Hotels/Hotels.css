@@ -14,6 +14,7 @@
     font-family: 'Lato', sans-serif;
     padding: 3.125rem 1.875rem;
     height: 600px;
+    margin-top: 2rem;
    
 }
 .search-btn{
@@ -50,6 +51,7 @@
     font-family: 'Times New Roman', Times, serif;
     padding: 3.125rem 1.875rem;
     height: 600px;
+    margin-bottom: 2rem;
 }
 
 .offers-content{

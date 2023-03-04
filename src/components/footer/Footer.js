@@ -11,7 +11,7 @@ const Footer = () => {
                 <div>
                     <h3>About</h3>
                     <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum atque voluptatem magnam odit sunt ipsum in beatae nobis ab eligendi? Nostrum quam magni illo ad ab rerum numquam autem enim.
+                        Hotello is a well managed and trusted website. We aim to offer our services efficiently to many users.
                     </p>
                 </div>
             </div>

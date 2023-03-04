@@ -1,4 +1,6 @@
-
+#vacations{
+    padding: 0 2%;
+}
 .vacation-container{
     height: 30vh;
     display: flex;

@@ -1,9 +1,8 @@
 .features-container{
 
-    margin-top: 8%;
     width: 100%;
-    height: 40vh;
-    display: grid;
+    /* height: 40vh; */
+    /* display: grid; */
     
     align-items: center;
     justify-content: center;
@@ -12,7 +11,8 @@
 .features-container-content{
     text-align: center;
     margin: auto;
-    width: 60%;
+    width: 100%;
+    padding: 0 15%;
 }
 
 .logos{
@@ -58,6 +58,18 @@
 } */
 
 
+@media only screen and (max-width: 1055px) {
+    .features-container-content{
+        width: 100%;
+        padding: 0 5%;
+    }
+}
+@media only screen and (max-width: 850px) {
+    .features-container-content{
+        width: 100%;
+        padding: 3% 5%;
+    }
+}
 /* mobiles */
 @media only screen and (max-width: 768px) {
     .logo-container{

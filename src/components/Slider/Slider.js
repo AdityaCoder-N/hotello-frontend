@@ -26,6 +26,8 @@ const SliderComponent =()=>{
     autoplay: true,
     autoplaySpeed: 2500,
     pauseOnHover: true,
+    nextArrow: <></>,
+    prevArrow: <></>
   };
 
   return (

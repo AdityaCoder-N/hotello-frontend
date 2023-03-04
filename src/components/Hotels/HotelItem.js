@@ -46,7 +46,7 @@ function HotelItem(props) {
 
   return (
     <div>
-      <div className="card mb-3" style={{maxWidth:"100%"}} data-aos="flip-up" data-aos-delay="10" data-aos-duration="700">
+      <div className="card mb-3" style={{maxWidth:"100%"}} >
         <div className="row g-0">
           <div className="col-md-4 hItemImage">
             <img src={props.image} className="card-image img-fluid rounded-start" alt="..."/>

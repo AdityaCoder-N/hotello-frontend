@@ -41,27 +41,27 @@ const Search = () => {
    
 
   return (
-    <div className='search-container container' id='search'>
+    <div className='search-component' id='search'>
 
-        <div className='row'>
+        <div className='search-container'>
 
-        <div className='search-component col-md-4'>
+            <div className='search-left'>
 
-            <div className='search-body'>
+                <div className='search-body'>
 
-                <div className='search-content' data-bs-toggle="modal" data-bs-target="#exampleModal" >
+                    <div className='search-content' data-bs-toggle="modal" data-bs-target="#exampleModal" >
 
-                    <div className='text'>
-                    <i className="fa-solid fa-location-dot" style={{margin:"10px"}}></i>Get Hotels Near You
+                        <div className='text'>
+                            <i className="fa-solid fa-location-dot" style={{margin:"10px"}}></i>Get Hotels Near You
+                        </div>
                     </div>
+
                 </div>
-
             </div>
-        </div>
 
-        <div className='col-md-8'>
-            <img src='./images/h6-img-3.jpg' id='search-img'/>
-        </div>
+            <div className='search-img-container'>
+                <img src='./images/h6-img-3.jpg' id='search-img'/>
+            </div>
         
         </div>
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

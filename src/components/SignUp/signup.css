@@ -33,3 +33,10 @@
     background-color: #c27f6d;
     color: white;
 }
+
+/* main mobile */
+@media only screen and (max-width: 450px) {
+    .signup-container{
+        width:90%
+    }
+}
