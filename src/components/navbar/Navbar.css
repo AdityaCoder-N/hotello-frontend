@@ -84,7 +84,7 @@ ul{
 .menu-links{
     height: 7rem;
     grid-column: 3/4;
-    
+
 }
 
 .menu-links ul{
@@ -153,6 +153,7 @@ ul{
       grid-column: 2/4;
       position: relative;
       z-index: 99;
+      transition: all 2s ease-in-out;
     }
   
     .mobile-menu-link {
@@ -162,7 +163,7 @@ ul{
       grid-column: 2/5;
       align-items: center;
       padding-left: 3rem;
-      transition: all 2s linear;
+      
       transform-origin: top;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
         rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;

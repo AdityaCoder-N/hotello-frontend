@@ -12,6 +12,7 @@
     height: 80%;
     width: 80%;
     margin-top: 5%;
+    margin-bottom: 5%;
     display: flex;
 }
 
@@ -103,6 +104,18 @@
     }
     .c-paymentDetails{
         width: 100%;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+
+    
+    .c-paymentDetails{
+        padding: 2% 1%;
+    }
+    .c-out{
+        padding-left: 5%;
+        padding-right: 5%;
     }
     
 }

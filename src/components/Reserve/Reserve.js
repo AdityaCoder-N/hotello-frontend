@@ -9,8 +9,8 @@ import { updateHotelName, updateCheckin,updateCheckout, updateRoomsBooked,update
 
 const Reserve = ({setOpen,hotelId,hotelName,img}) => {
 
-    const navigate = useNavigate();
     const host = "https://hotello-backend-pjrg.onrender.com";
+    // const host = "http://localhost:3001";
 
     const [data,setData] = useState([{}]);
     const params = useParams();
