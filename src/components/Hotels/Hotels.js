@@ -13,8 +13,7 @@ const key = '064a565b0fmshc4871aedc663148p130920jsnc2b7e4108731';
 
 const Hotels = (props) => {
 
-    // const [hotels, setHotels] = useState([{"id":"39482373","name":"Brinjal Hotels","address":"Haridwar, Rishikesh Road Bhupatwala, Near Jain Temple","price":"₹2,275","rating":3.5,"thumbnail":"http://media.expedia.com/hotels/40000000/39490000/39482400/39482373/737b2892_b.jpg","images":["https://images.trvl-media.com/lodging/40000000/39490000/39482400/39482373/8e4b165c.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/40000000/39490000/39482400/39482373/952b3397.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/40000000/39490000/39482400/39482373/fffc2229.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/40000000/39490000/39482400/39482373/2ee754bf.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/40000000/39490000/39482400/39482373/173955e3.jpg?impolicy=resizecrop&rw=670&ra=fit"],"mapImage":"https://maps.googleapis.com/maps/api/staticmap?channel=expedia-HotelInformation&maptype=roadmap&format=jpg&zoom=13&scale=&size=600x120&markers=icon:https://a.travel-assets.com/shopping-pwa/images/his-preview-marker.png%7C29.989356,78.18609&key=AIzaSyCYjQus5kCufOpSj932jFoR_AJiL9yiwOw&signature=uyxoguB0plsC7MJz8YEB8AaN8Ts="},{"id":"19251319","name":"Ramada by Wyndham Dehradun Chakrata Road","address":"Chakrata Road, Mahinder Vihar ","price":"₹4,725","rating":4,"thumbnail":"https://images.trvl-media.com/hotels/20000000/19260000/19251400/19251319/5610709c.jpg?impolicy=resizecrop&rw=455&ra=fit","images":["https://images.trvl-media.com/lodging/20000000/19260000/19251400/19251319/5610709c.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/20000000/19260000/19251400/19251319/91c6cdea.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/20000000/19260000/19251400/19251319/7c74bdef.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/20000000/19260000/19251400/19251319/147e0d07.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/20000000/19260000/19251400/19251319/9616fea3.jpg?impolicy=resizecrop&rw=670&ra=fit"],"mapImage":"https://maps.googleapis.com/maps/api/staticmap?channel=expedia-HotelInformation&maptype=roadmap&format=jpg&zoom=13&scale=&size=600x120&markers=icon:https://a.travel-assets.com/shopping-pwa/images/his-preview-marker.png%7C30.333461,78.02244&key=AIzaSyCYjQus5kCufOpSj932jFoR_AJiL9yiwOw&signature=2xhJVAb7kJ3W7z8D3YJp7RBpekM="},{"id":"18445600","name":"Hotel Rajpur Heights","address":"23/17 Old Musorrie Road Near Shahanshai Ashram","price":"₹2,107","rating":3,"thumbnail":"https://images.trvl-media.com/hotels/19000000/18450000/18445600/18445600/1fb6798e.jpg?impolicy=resizecrop&rw=455&ra=fit","images":["https://images.trvl-media.com/lodging/19000000/18450000/18445600/18445600/1fb6798e.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/19000000/18450000/18445600/18445600/1943422b.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/19000000/18450000/18445600/18445600/09b8ff7c.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/19000000/18450000/18445600/18445600/51144196.jpg?impolicy=resizecrop&rw=670&ra=fit","https://images.trvl-media.com/lodging/19000000/18450000/18445600/18445600/7160946d.jpg?impolicy=resizecrop&rw=670&ra=fit"],"mapImage":"https://maps.googleapis.com/maps/api/staticmap?channel=expedia-HotelInformation&maptype=roadmap&format=jpg&zoom=13&scale=&size=600x120&markers=icon:https://a.travel-assets.com/shopping-pwa/images/his-preview-marker.png%7C30.397765,78.09335&key=AIzaSyCYjQus5kCufOpSj932jFoR_AJiL9yiwOw&signature=mRO9DlnaptYHpVETPd47roWNZ9Q="}]);
-
+    
     const [hotels,setHotels] = useState([]);
     const idArray  = useRef([]);
 
@@ -65,7 +64,7 @@ const Hotels = (props) => {
         axios.request(options).then((response) => {
 
             let id = response.data.data[0].gaiaId;
-            console.log("destination id : ", id);
+            // console.log("destination id : ", id);
             getHotelById(id);
         })
     }
@@ -99,7 +98,7 @@ const Hotels = (props) => {
         axios.request(options).then((response) => {
 
             const hotelArray = response.data.properties;
-            console.log("hotel array", hotelArray);
+            // console.log("hotel array", hotelArray);
             const tempArr = [];
 
             for (let i = 0; i <Math.min(hotelArray.length,20); i++) {
@@ -107,7 +106,7 @@ const Hotels = (props) => {
             }
             // console.log("array sent to getHotelDetails : ",tempArr);
 
-            console.log("temp arr ",tempArr)
+            // console.log("temp arr ",tempArr)
             setIdArray(tempArr);
             
 
@@ -119,13 +118,11 @@ const Hotels = (props) => {
     }
 
     const getNearbyHotels = async (latitude, longitude) => {
-
-        console.log(latitude)
    
         const res = await fetch(`https://geocode.maps.co/reverse?lat=${latitude}&lon=${longitude}`)
         
         const address = await res.json();
-        console.log(address);
+        // console.log(address);
 
         const destination = address.address.city;
         getDestinationId(destination);
@@ -134,7 +131,7 @@ const Hotels = (props) => {
 
     const getHotelDetails = async () => {
 
-        console.log("id array : ",idArray);
+        // console.log("id array : ",idArray);
 
         setCount(count+4);
 

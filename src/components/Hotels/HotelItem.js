@@ -32,12 +32,13 @@ function HotelItem(props) {
 
     });
 
-    const hotel = await response.json();
-
+    const res = await response.json();
+    console.log("response from create hotel : ",res)
+    const hotel = res.hotel;
     setHotelId(hotel._id);
-    console.log("created hotel : ",hotel);
 
     // saving default rooms in hotels
+    if(!res.found){
     const res1 = await fetch(`${host}/rooms/createRoom/${hotel._id}`,{
 
       method:'POST',
@@ -72,6 +73,7 @@ function HotelItem(props) {
   })
   
     console.log("Response of room : ",res1,res2)
+}
     setReserveModal(true);
 
   }
