@@ -9,7 +9,7 @@ import { updateHotelName, updateCheckin,updateCheckout, updateRoomsBooked,update
 
 const Reserve = ({setOpen,hotelId,hotelName,img}) => {
 
-    const host = "https://hotello-backend-pjrg.onrender.com";
+    const host = "https://hotello-backend-nine.vercel.app";
     // const host = "http://localhost:3001";
 
     const [data,setData] = useState([{}]);

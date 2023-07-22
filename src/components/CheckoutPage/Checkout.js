@@ -7,7 +7,7 @@ import './Checkout.css'
 
 const Checkout = (props) => {
 
-    const host = "https://hotello-backend-pjrg.onrender.com";
+    const host = "https://hotello-backend-nine.vercel.app";
     // const host = "http://localhost:3001";
 
     const [credentials,setCredentials] = useState({name:'',email:'',number:'',adhaar:''});

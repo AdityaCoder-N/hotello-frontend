@@ -6,7 +6,7 @@ import './HotelItem.css'
 
 function HotelItem(props) {
 
-  const host = "https://hotello-backend-pjrg.onrender.com";
+  const host = "https://hotello-backend-nine.vercel.app";
   // const host = "http://localhost:3001";
 
   const navigate = useNavigate();
