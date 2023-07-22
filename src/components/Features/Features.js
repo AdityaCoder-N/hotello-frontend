@@ -24,7 +24,7 @@ const Features = () => {
         <div className='features-container'>
 
             <div className='features-container-content'>
-                <p>Our Hotels offer the best of services for a good stay and satisfaction of the Guest. Our rooms are well maintained and cleaned regularly by the hotel staff, taking care of proper hygiene and cleanliness
+                <p>Our Hotels offer the best of services for a good stay and satisfaction of the Guest. Our rooms are well maintained and cleaned regularly by the hotel staff.
                 </p>
             </div>
 

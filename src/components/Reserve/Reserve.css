@@ -99,3 +99,22 @@
     border: 1px solid #d6816a;
     border-radius: 0%;
 }
+
+@media only screen and (max-width: 600px) {
+
+    .rClose{
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        /* z-index: 200000; */
+        
+        left: 94%;
+        cursor: pointer;
+    }
+
+    .rItem{
+        display: block;
+    }
+    
+    
+}

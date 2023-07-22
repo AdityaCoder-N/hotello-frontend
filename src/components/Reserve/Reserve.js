@@ -106,12 +106,20 @@ const Reserve = ({setOpen,hotelId,hotelName,img}) => {
 
 
     useEffect(() => {
+
+    // Disable scrolling on the background when the modal is open
+    document.body.style.overflow = 'hidden';
+        
       fetchRooms();
 
       dispatch(updateCheckin(params.checkin.substring(1)));
       dispatch(updateCheckout(params.checkout.substring(1)));
     //   dispatch(updateCost())
 
+        return () => {
+        // Re-enable scrolling on the background when the modal is closed
+        document.body.style.overflow = 'auto';
+        }
     }, [])
 
 

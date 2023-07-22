@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import './photosModal.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,16 +6,35 @@ import "slick-carousel/slick/slick-theme.css";
 
 const HotelPhotosModal = ({setPhotosModal, photosModal, images}) => {
 
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
     var settings = {
         dots: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: isMobile?1:3,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 1500,
         pauseOnHover: true,
       };
 
+      useEffect(() => {
+
+        // Disable scrolling on the background when the modal is open
+        document.body.style.overflow = 'hidden';
+
+
+        window.addEventListener("resize", () => {
+            const ismobile = window.innerWidth < 768;
+            if (ismobile !== isMobile) setIsMobile(ismobile);
+        }, false);
+
+        return () => {
+          // Re-enable scrolling on the background when the modal is closed
+          document.body.style.overflow = 'auto';
+        }
+
+    }, [isMobile]);
     //   console.log(images);
   return (
 
