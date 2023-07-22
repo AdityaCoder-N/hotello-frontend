@@ -189,6 +189,8 @@ const Hotels = (props) => {
     const [showAlert,setShowAlert] = useState(false);
     useEffect(() => {
 
+        window.scrollTo(0, 0)
+
         
         setLoading(true);
         if (params.location.length > 1) {

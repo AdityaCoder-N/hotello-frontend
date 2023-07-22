@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import HotelPhotosModal from '../HotelPhotosModal/HotelPhotosModal';
 import Reserve from '../Reserve/Reserve';
+import LoadingModal from '../LoadingModal/LoadingModal';
 import './HotelItem.css'
 
 function HotelItem(props) {
@@ -13,6 +14,7 @@ function HotelItem(props) {
 
   const [reserveModal,setReserveModal] = useState(false);
   const [photosModal,setPhotosModal] = useState(false);
+  const [loadingModal,setLoadingModal] = useState(false);
   const [hotelId,setHotelId] = useState();
 
   const bookHotel=async()=>{
@@ -21,7 +23,8 @@ function HotelItem(props) {
     {
       navigate('/login');
     }
-
+    
+    setLoadingModal(true)
     const response = await fetch(`${host}/hotels/createhotel`,{
       method: 'POST', 
             
@@ -74,6 +77,7 @@ function HotelItem(props) {
   
     console.log("Response of room : ",res1,res2)
 }
+    setLoadingModal(false)
     setReserveModal(true);
 
   }
@@ -112,6 +116,7 @@ function HotelItem(props) {
       </div>
 
       
+      { loadingModal && <LoadingModal/> }
       { reserveModal && <Reserve setOpen={setReserveModal} hotelId={hotelId} open={reserveModal} hotelName={props.name} img={props.image}/> }
       { photosModal && < HotelPhotosModal setPhotosModal= {setPhotosModal} images = {props.hotelImages} photosModal={photosModal}/> }
     </div>
